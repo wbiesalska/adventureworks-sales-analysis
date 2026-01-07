@@ -111,7 +111,7 @@ Recommendation: Prioritize inventory, marketing budget, and promotions toward hi
 Recommendation: Launch targeted re-engagement campaigns (email/win-back offers) for customers who purchased in the previous year but not in the current year. Focus on high-value segments (top cities (London, Paris, Bellflower, Berlin) and repeat buyers).
 
 #### Key Sales Hubs
-- London and Paris generate the highest revenue and customer volume, clearly standing out as primary regional sales centers.
+- London and Paris generate the highest sales (over 1.1M) and customer volume, clearly standing out as primary regional sales centers.
 
 Recommendation: Increase investment in London and Paris through targeted local campaigns and expanded sales capacity to maximize revenue potential.
 
