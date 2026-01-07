@@ -7,13 +7,12 @@ AdventureWorks database: https://learn.microsoft.com/en-us/sql/samples/adventure
 The goal of this project is to demonstrate proficiency in SQL, data modeling, DAX calculations, interactive visualizations, and translating data into clear business recommendations.
 
 ## Tools Used
-SQL Server Management Studio (SSMS): used to write and execute SQL queries to extract, clean, and transform relevant data from the database (ETL process).
+- SQL Server Management Studio (SSMS): used to write and execute SQL queries to extract, clean, and transform relevant data from the database (ETL process).
+- Power BI: used for both data modeling and visualization.
+- DAX: used within Power BI to calculate metrics.
 
-Power BI: used for both data modeling and visualization.
-
-DAX: used within Power BI to calculate metrics.
-
-## Data Extraction and Cleaning
+## Data Cleansing & Transformation (SQL)
+Below are the SQL statements for cleansing and transforming necessary data.
 ### DIM_Customer table
 ```
 -- Cleansed DIM_Customer Table --
@@ -82,32 +81,39 @@ SELECT
 ORDER BY OrderDateKey ASC
 ```
 
-## Results & Business Recommendations
-#### Revenue Concentration
-- The “Bikes” category consistently accounts for the vast majority of total revenue (~90-95% in most periods).
-- Top-performing models (e.g., Road-150, Mountain-200) alone generate a disproportionate share of sales.
-- Within the Bikes category, color preferences are clear: Black and Yellow models dominate the top sellers, while colors like Silver, Red, and Blue contribute significantly less volume and revenue.
+## Data Model
+Below is a screenshot of the data model after cleansed and prepared tables were read into Power BI.
 
-Recommendation: Prioritize inventory, marketing budget, and promotions toward high-margin bike models (Mountain-200, Road-250, Touring-1000, Road-350-W, Road-550-W) while monitoring stock levels for top sellers to avoid lost sales, and consider optimizing the color palette by focusing production and promotions on high-demand colors (black, yellow).
+<img width="929" height="630" alt="image" src="https://github.com/user-attachments/assets/b0b90d70-f412-4a45-a217-2fdc4a455f27" />
+
+
+
+## Results & Business Recommendations
+
+#### Revenue Concentration
+- In spite of the highest sales quantity placed for "Accessories", the "Bikes" category consistently accounts for the vast majority of total revenue (~90-95% in most periods).
+- Top-performing models of bikes (Road-250, Mountain-200, Road-650) alone generate a disproportionate share of sales.
+- Within the "Bikes" category, color preferences are clear: black and yellow models dominate the top sellers, while colors like silver, red, and blue contribute significantly less volume and revenue.
+
+Recommendation: Prioritize inventory, marketing budget, and promotions toward high-margin bike models (Road-250, Mountain-200, Road-650) while monitoring stock levels for top sellers to avoid lost sales, and consider optimizing the color palette by focusing production and promotions on high-demand colors (black, yellow).
 
 #### Customer Behavior
-- Average Order Value (AOV) and average items per order remain stable, indicating consistent basket size.
-- Customer retention rate varies year-over-year but shows room for improvement (churn ~25–35% depending on cohort).
+- Average Order Value (AOV) decreased from 2023 to 2024, primarily due to the successful introduction of lower-priced accessories and clothing. This shift should be viewed positively, as it coincided with an ~8-fold increase in order volume, higher average items per order (>2), and overall revenue growth.
+- Customer retention rate shows a positive trend, improving year-over-year (rising to approximately 29% in 2024), suggesting growing customer loyalty.
 
-Recommendation: Launch targeted re-engagement campaigns (email/win-back offers) for customers who purchased in the previous year but not in the current year. Focus on high-value segments (top cities and repeat buyers).
+Recommendation: Launch targeted re-engagement campaigns (email/win-back offers) for customers who purchased in the previous year but not in the current year. Focus on high-value segments (top cities (London, Paris, Bellflower, Berlin) and repeat buyers).
 
-#### Product Portfolio Efficiency
-- A significant number of SKUs (especially in Components and Clothing) contribute very low revenue despite occupying catalog space.
+#### Key Sales Hubs
+- London and Paris generate the highest revenue and customer volume, clearly standing out as primary regional sales centers.
 
-Recommendation: Perform a formal product portfolio review – consider phasing out or bundling low-performing items to reduce complexity and improve margins.
+Recommendation: Increase investment in London and Paris through targeted local campaigns and expanded sales capacity to maximize revenue potential.
 
-## Next Steps
-To further enhance the dashboard and deliver even greater business value:
+#### Product Portfolio Expansion & Cross-Selling Success
+- In 2023, sales were restricted to the Bikes category only, limiting volume and revenue potential.
+- The 2024 launch of Accessories and Clothing drove explosive growth: dramatically higher product quantities sold, an 8-fold surge in orders, and a substantial total revenue increase. The rise in average items per order (>2) strongly indicates effective cross-selling, with bike buyers frequently adding accessories/clothing.
+- A significant number of SKUs ("Components" category) contribute 0 revenue despite occupying catalog space.
 
-Integrate actual sales targets/budget data for variance analysis and forecasting
-Add geographic mapping with country-level aggregation (requires cleaning/enriching city data)
-Implement cohort analysis to track customer lifetime value (CLV) over time
-Connect to a live data source (e.g., SQL Server or Azure) for real-time reporting
-Develop executive-level drill-through reports and automated PDF/email distribution via Power BI Service
-Feel free to explore the .pbix file and provide feedback!
-— Created as a portfolio project for Data Analyst positions.
+Recommendation: Build on this cross-selling momentum by creating curated bundles (e.g., bike + helmet, bottle, or apparel kits) to boost AOV further. Review the portfolio to expand high-velocity accessory lines while pruning underperforming SKUs ("Components" category).
+
+
+Created as a portfolio project for Data Analyst positions.
