@@ -87,6 +87,13 @@ Below is a screenshot of the data model after cleansed and prepared tables were 
 <img width="929" height="630" alt="image" src="https://github.com/user-attachments/assets/b0b90d70-f412-4a45-a217-2fdc4a455f27" />
 
 
+## Sales Management Dashboard
+<img width="1219" height="748" alt="image" src="https://github.com/user-attachments/assets/b39301e2-fe5a-4008-b189-986d1e960c7b" />
+<img width="1221" height="748" alt="image" src="https://github.com/user-attachments/assets/de51fc82-89dc-43e1-9fcc-66be3bcf6dad" />
+<img width="1217" height="748" alt="image" src="https://github.com/user-attachments/assets/985fa4e8-2753-4994-b2bb-3b20f0e87281" />
+
+
+
 
 ## Results & Business Recommendations
 
